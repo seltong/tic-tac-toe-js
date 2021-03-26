@@ -1,4 +1,4 @@
 "use strict"
 import { renderHome } from './pages/Home/home.js';
 
-renderHome();
+document.getElementById("root").append(renderHome());

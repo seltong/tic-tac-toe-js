@@ -1,5 +1,7 @@
 "use strict"
 import { formField, inputField } from '../../components/forms.js';
+import { setRoot } from '../../utils.js';
+import { renderGame } from '../Game/game.js';
 
 export function renderHome() {
   const form = formField();
@@ -7,7 +9,7 @@ export function renderHome() {
   form.append(inputField({
     type: 'button',
     value: 'New Game',
-    onClick: () => null
+    onClick: () => setRoot(renderGame)
   }));
 
   form.append(inputField({
@@ -22,5 +24,6 @@ export function renderHome() {
     onClick: () => null
   }));
 
-  document.querySelector("body").append(form);
+  //document.querySelector("body").append(form);
+  return form;
 }
